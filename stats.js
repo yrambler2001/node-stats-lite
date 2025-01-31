@@ -85,7 +85,7 @@ function mode(vals) {
     // multi-modal
     if (rank.length == vals.length) {
       // all values are modes
-      return vals
+      return new Set(vals)
     }
     var modes = new Set([mode])
     var modeCount = dist[mode]

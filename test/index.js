@@ -81,6 +81,10 @@ test("mode", function (t) {
 
   t.deepEquals(mode([1, 2, 2, 2, 3, 14]), 2, "mode works")
 
+  t.deepEquals(mode([1, 2]), new Set([1, 2]), "all values are modes works")
+
+  t.deepEquals(mode([1, 2, 3, 4]), new Set([1, 2, 3, 4]), "all values are modes works")
+
   t.deepEquals(mode([1, 1, 7, 5, 5, 8, 7]), new Set([1, 5, 7]), "multi-modal works")
 
   t.deepEquals(mode([1, 1, 7, 5, 5, 8, 7]), new Set([1, 7, 5]), "multi-modal works and order doesn't matter (yay Set)")
